@@ -34,6 +34,12 @@ const piano = {
 
             this.play(note);
         });
+        // on click
+        for (const key of this.keys) {
+            key.addEventListener('click', () => {
+                this.play([key])
+            })
+        }
     },
 
     play: function (note) {
